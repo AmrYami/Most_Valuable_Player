@@ -34,9 +34,8 @@ class MVPService
      */
     public function MVPProccess(Request $request){
        $files = $this->MVPRepository->MVPProccess($request->toArray());
-//        $compositeData = $this->compositeSports->collectTeams($files);
-
-       dd($files);
+        $result = $this->compositeSports->collect($files);
+       return $result;
     }
 
 }
