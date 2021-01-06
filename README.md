@@ -10,9 +10,12 @@ in command line go to directory project and please do:
 3- php artisan key:generate
 
 then open url.
+
 to add more sports you need to 3 files
 first you need to add file in public/sports its has data
+
 second add model in app/Models/{name it as its defined in file sports in first row (camelCase)} this file just split and set,get data and implement interface PlayerInfo
+
 third add new class in app/Composites/SportClasses/{name it as its defined in file sports in first row (camelCase)} this file has logic data and implement interface CalculateData
 
 #Task
