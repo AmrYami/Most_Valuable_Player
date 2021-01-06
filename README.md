@@ -9,7 +9,7 @@ in command line go to directory project and please do:
 
 3- php artisan key:generate
 
-then open url.
+then check routes/api and open url.
 
 to add more sports you need to 3 files
 first you need to add file in public/sports its has data
