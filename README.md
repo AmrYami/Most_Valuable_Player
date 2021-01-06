@@ -1,9 +1,14 @@
 # Most Valuable Player
 how to run project 
+
 in command line go to directory project and please do:
+
 1- composer update
+
 2-cp .env.examble .env
+
 3- php artisan key:generate
+
 then open url.
 to add more sports you need to 3 files
 first you need to add file in public/sports its has data
