@@ -30,20 +30,19 @@ class CompositeSports
             $type = ucfirst(strtolower($contents->first()));
             $sports[$type] = [];
             $totlaTeamScores = [];
-            foreach ($contents as $key => $line) {
+            foreach ($contents as $key => $line) {// get content in every file
                 if ($key !== 0 && $line !== '') {
                     // proccess to split, set and get data in model
                     $classModel = SportModelFactory::proccess($type);
                     $classModel->splitData($line);
-                    if (!isset($totlaTeamScores[$classModel->getTeam()]))
+                    if (!isset($totlaTeamScores[$classModel->getTeam()]))// if there's no key with this team just create it to do sum points
                         $totlaTeamScores[$classModel->getTeam()] = 0;
                     // proccess to calculate
                     $classCalculate = SportClassFactory::proccess($type, $classModel);
                     $classCalculate->calculate();
-                    $totlaTeamScores[$classModel->getTeam()] += $classCalculate->getTotalPoints();
-                    $playerData = $classCalculate->getPlayerInformation();
-
-                    $sports[$type][] = $playerData;
+                    $totlaTeamScores[$classModel->getTeam()] += $classCalculate->getTotalPoints();// do this to get the winner team
+                    $playerData = $classCalculate->getPlayerInformation();//players info
+                    $sports[$type][] = $playerData;// push players in there teams
                 }
             }
             $MVP[$type] = $this->getMVP($sports[$type], $totlaTeamScores, $classModel->getADDPOINTSTOWINNERTEAM());

@@ -33,8 +33,8 @@ class MVPService
      * @return \Illuminate\Support\Collection
      */
     public function MVPProccess(Request $request){
-       $files = $this->MVPRepository->MVPProccess($request->toArray());
-        $result = $this->compositeSports->collect($files);
+       $files = $this->MVPRepository->MVPProccess($request->toArray());// to read all files
+        $result = $this->compositeSports->collect($files);// go to proccess to collect teams and calculate players
        return $result;
     }
 

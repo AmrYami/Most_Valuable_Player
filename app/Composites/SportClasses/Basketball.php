@@ -36,6 +36,9 @@ class Basketball implements CalculateData
         $this->playerInfo = $playerInfo;
     }
 
+    /**
+     *manage data to set position and calc scores
+     */
     public function calculate(): void
     {
         $currentPosition = $this->playerInfo->getPosition();
@@ -52,6 +55,11 @@ class Basketball implements CalculateData
         $this->totalPoints = $totalScore;
     }
 
+    /**
+     * @param $scorePlayer
+     * @return float|int
+     * multiply all items in array and then sum to get total
+     */
     public function playerScoreCalc($scorePlayer)
     {
         $sum = [];

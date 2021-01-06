@@ -7,6 +7,7 @@ use App\Contracts\PlayerInfo;
 
 class Basketball implements PlayerInfo
 {
+    // model just for split, set and get data
     static $POSITIONS = ['G', 'F', 'C'];
     static $POINTS_POSITIONS = [
         'G' => [2, 3, 1],
