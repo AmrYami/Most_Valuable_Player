@@ -1,6 +1,6 @@
 # Most Valuable Player
 how to run project 
-in command line got to directory project and please do:
+in command line go to directory project and please do:
 1- composer update
 2-cp .env.examble .env
 3- php artisan key:generate
